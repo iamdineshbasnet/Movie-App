@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { fetchDataFromApi } from "./utils/api";
 import { useDispatch, useSelector } from "react-redux";
 import { getApiConfiguration } from "./store/homePageSlice";
+import Header from "./components/Header";
+
 function App() {
     const dispatch = useDispatch();
     const url = useSelector((state) => state.home.url);
@@ -16,7 +18,11 @@ function App() {
         apiTesting();
     }, []);
 
-    return <div className="App">{url?.total_pages}</div>;
+    return (
+        <>
+            <Header />
+        </>
+    );
 }
 
 export default App;
