@@ -1,6 +1,5 @@
 import axios from "axios";
 
-
 //https://api.themoviedb.org/3/movie/550?api_key=775df22ce70e2616df00a0a6cefff4f9
 const BASE_URL = "https://api.themoviedb.org/3";
 
@@ -18,7 +17,6 @@ export const fetchDataFromApi = async (url, params) => {
         });
         return data;
     } catch (err) {
-        console.log(err);
-        return err; 
+        return err;
     }
 };
