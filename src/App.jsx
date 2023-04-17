@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { fetchDataFromApi } from "./utils/api";
 import { useDispatch, useSelector } from "react-redux";
 import { getApiConfiguration } from "./store/homePageSlice";
+import Footer from "./components/Footer";
 function App() {
     const dispatch = useDispatch();
     const url = useSelector((state) => state.home.url);
@@ -30,6 +31,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                 </Routes>
+                <Footer/>
             </BrowserRouter>
         </>
     );
