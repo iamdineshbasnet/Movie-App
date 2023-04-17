@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
+import Footer from './components/Footer'
 import Home from "./pages/home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { fetchDataFromApi } from "./utils/api";
@@ -30,6 +31,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                 </Routes>
+                <Footer />
             </BrowserRouter>
         </>
     );
