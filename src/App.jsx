@@ -1,15 +1,11 @@
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Home from "./pages/home";
+import Footer from './components/Footer'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { fetchDataFromApi } from "./utils/api";
 import { useDispatch, useSelector } from "react-redux";
-<<<<<<< Updated upstream
-import { getApiConfiguration } from "./store/homePageSlice";
-import Footer from "./components/Footer";
-=======
 import { getApiConfiguration, getGenres } from "./store/homePageSlice";
->>>>>>> Stashed changes
 function App() {
     const dispatch = useDispatch();
     const url = useSelector((state) => state.home.url);
