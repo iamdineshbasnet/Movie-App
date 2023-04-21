@@ -6,7 +6,7 @@ import { VscChromeClose } from "react-icons/vsc";
 import { useNavigate, useLocation } from "react-router-dom";
 
 import Layout from "../Layout";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.png";
 
 const index = () => {
     const [mobileMenu, setMobileMenu] = useState(false);

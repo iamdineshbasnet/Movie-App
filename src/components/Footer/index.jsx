@@ -4,6 +4,8 @@ import {
     FaInstagram,
     FaTwitter,
     FaLinkedin,
+    FaCodepen,
+    FaGithub,
 } from "react-icons/fa";
 
 import Layout from "../Layout";
@@ -22,25 +24,43 @@ const Footer = () => {
                     <li className="menuItem">FAQ</li>
                 </ul>
                 <div className="infoText">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                    The data displayed on this app is provided by The Movie
+                    Database (TMDb) API. TMDb is a community-built movie and TV
+                    database that provides free access to data on movies and TV
+                    shows, including cast, crew, ratings, reviews, and more.
+                    This app uses the TMDb API to display information about
+                    movies and TV shows for educational purposes only. TMDb is
+                    not affiliated with this app and does not endorse or sponsor
+                    it.
                 </div>
                 <div className="socialIcons">
                     <span className="icon">
-                        <FaFacebookF />
+                        <a
+                            href="https://github.com/iamdineshbasnet"
+                            target="_blank">
+                            <FaGithub />
+                        </a>
                     </span>
                     <span className="icon">
-                        <FaInstagram />
+                        <a
+                            href="https://codepen.io/iamdineshbasnet"
+                            target="_blank">
+                            <FaCodepen />
+                        </a>
                     </span>
                     <span className="icon">
-                        <FaTwitter />
+                        <a
+                            href="https://facebook.com/iamdineshbasnet"
+                            target="_blank">
+                            <FaFacebookF />
+                        </a>
                     </span>
                     <span className="icon">
-                        <FaLinkedin />
+                        <a
+                            href="https://twitter.com/iamdineshbasnet"
+                            target="_blank">
+                            <FaTwitter />
+                        </a>
                     </span>
                 </div>
             </Layout>

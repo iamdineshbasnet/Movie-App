@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -15,15 +17,16 @@
   --black3: #020c1b;
   --black-lighter: #1c4b91;
   --black-light: #173d77;
-  --pink: #da2f68;
+  --blue: #4b78bb;
   --orange: #f89e00;
-  --gradient: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
+  --gradient: linear-gradient(98.37deg, #4b78bb 0.99%, #173d77 100%);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 body {
@@ -33,7 +36,9 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
-
+a{
+  color: #4b78bb;
+}
 .skeleton {
   position: relative;
   overflow: hidden;
