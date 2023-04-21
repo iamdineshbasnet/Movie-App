@@ -1,11 +1,15 @@
-import { useState, useEffect } from "react";
-import Header from "./components/Header";
-import Home from "./pages/home";
-import Footer from './components/Footer'
+import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import { fetchDataFromApi } from "./utils/api";
 import { useDispatch, useSelector } from "react-redux";
 import { getApiConfiguration, getGenres } from "./store/homePageSlice";
+
+import Header from "./components/Header";
+import Footer from './components/Footer'
+import Home from "./pages/home";
+import DetailsPage from './pages/DetailsPage'
+
 function App() {
     const dispatch = useDispatch();
     const url = useSelector((state) => state.home.url);
@@ -48,6 +52,7 @@ function App() {
                 <Header />
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/:mediaType/:id" element={<DetailsPage />} />
                 </Routes>
                 <Footer/>
             </BrowserRouter>
