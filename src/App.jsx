@@ -9,7 +9,7 @@ import Header from "./components/Header";
 import Footer from './components/Footer'
 import Home from "./pages/home";
 import DetailsPage from './pages/DetailsPage'
-
+import SearchMovie from './pages/SearchMovie'
 function App() {
     const dispatch = useDispatch();
     const url = useSelector((state) => state.home.url);
@@ -53,6 +53,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/:mediaType/:id" element={<DetailsPage />} />
+                    <Route path="/search/:query" element={<SearchMovie />} />
                 </Routes>
                 <Footer/>
             </BrowserRouter>
