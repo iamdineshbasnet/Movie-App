@@ -13,8 +13,33 @@ const index = () => {
     const [show, setShow] = useState("top");
     const [showSearch, setShowSearch] = useState("");
     const [query, setQuery] = useState("");
+    const [lastScrollY, setLastScrollY] = useState(0);
+    const navigate = useNavigate();
+    const location = useLocation();
 
-   
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location]);
+
+    const controlNavbar = () => {
+        if (window.scrollY > 200) {
+            if (window.scrollY > lastScrollY && !mobileMenu) {
+                setShow("hide");
+            } else {
+                setShow("show");
+            }
+        } else {
+            setShow("top");
+        }
+        setLastScrollY(window.scrollY);
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", controlNavbar);
+        return () => {
+            window.removeEventListener("scroll", controlNavbar);
+        };
+    }, [lastScrollY]);
 
     const openSearch = () => {
         setMobileMenu(false);
@@ -80,6 +105,7 @@ const index = () => {
                         <div className="searchInput">
                             <input
                                 type="text"
+                                autoFocus
                                 placeholder="Search for a movie or tv show...."
                                 onChange={(e) => setQuery(e.target.value)}
                                 onKeyUp={searchQueryHandler}

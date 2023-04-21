@@ -10,6 +10,8 @@ import Footer from './components/Footer'
 import Home from "./pages/home";
 import DetailsPage from './pages/DetailsPage'
 import SearchMovie from './pages/SearchMovie'
+import Explore from "./pages/Explore";
+
 function App() {
     const dispatch = useDispatch();
     const url = useSelector((state) => state.home.url);
@@ -24,6 +26,7 @@ function App() {
             dispatch(getApiConfiguration(url));
         });
     };
+    
     useEffect(() => {
         fetchApiConfig();
         genresCall()
@@ -54,6 +57,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/:mediaType/:id" element={<DetailsPage />} />
                     <Route path="/search/:query" element={<SearchMovie />} />
+                    <Route path="/explore/:mediaType" element={<Explore />} />
                 </Routes>
                 <Footer/>
             </BrowserRouter>
