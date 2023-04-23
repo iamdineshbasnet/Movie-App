@@ -24,7 +24,7 @@ const index = () => {
     }, [data]);
 
     const searchQueryHandler = (event) => {
-        if (event.key === "Enter" && query.length > 0) {
+        if ((event.key === "Enter" && query.length > 0) || event.target.innerText.toLowerCase() === 'search') {
             navigate(`/search/${query}`);
         }
     };
@@ -52,7 +52,7 @@ const index = () => {
                             onChange={(e) => setQuery(e.target.value)}
                             onKeyUp={searchQueryHandler}
                         />
-                        <button>Search</button>
+                        <button onClick={searchQueryHandler}>Search</button>
                     </div>
                 </div>
             </Layout>

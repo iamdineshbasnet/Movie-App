@@ -34,34 +34,34 @@ const Footer = () => {
                     it.
                 </div>
                 <div className="socialIcons">
-                    <span className="icon">
-                        <a
-                            href="https://github.com/iamdineshbasnet"
-                            target="_blank">
+                    <a
+                        href="https://github.com/iamdineshbasnet"
+                        target="_blank">
+                        <span className="icon">
                             <FaGithub />
-                        </a>
-                    </span>
-                    <span className="icon">
-                        <a
-                            href="https://codepen.io/iamdineshbasnet"
-                            target="_blank">
+                        </span>
+                    </a>
+                    <a
+                        href="https://codepen.io/iamdineshbasnet"
+                        target="_blank">
+                        <span className="icon">
                             <FaCodepen />
-                        </a>
-                    </span>
-                    <span className="icon">
-                        <a
-                            href="https://facebook.com/iamdineshbasnet"
-                            target="_blank">
+                        </span>
+                    </a>
+                    <a
+                        href="https://facebook.com/iamdineshbasnet"
+                        target="_blank">
+                        <span className="icon">
                             <FaFacebookF />
-                        </a>
-                    </span>
-                    <span className="icon">
-                        <a
-                            href="https://twitter.com/iamdineshbasnet"
-                            target="_blank">
+                        </span>
+                    </a>
+                    <a
+                        href="https://twitter.com/iamdineshbasnet"
+                        target="_blank">
+                        <span className="icon">
                             <FaTwitter />
-                        </a>
-                    </span>
+                        </span>
+                    </a>
                 </div>
             </Layout>
         </footer>
