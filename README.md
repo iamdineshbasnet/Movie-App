@@ -2,11 +2,17 @@
 
 The Movie DB is a web application built with React.js. It allows users to browse and search for movies and view movie details.
 
+
 ## Features
 
 - Browse a vast collection of movies
 - Search for movies by title, genre, or keywords
 - View movie details, including synopsis, cast, and ratings
+
+
+## Demo
+
+Checkout the [demo](https://themoviedb-rust.vercel.app/) of an app.
 
 ## Technologies Used
 
